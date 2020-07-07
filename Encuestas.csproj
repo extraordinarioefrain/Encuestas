@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuncAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncAdministrador.Designer.cs">
+      <DependentUpon>FuncAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncAdministrador.resx">
+      <DependentUpon>FuncAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -101,6 +110,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Bienvenidos-clientes-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AvaluacioDocentG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Herramientas-de-Estudio-para-Universitarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\279-2798675_workers-compensation-consultation-accidente-de-trabajo-obrero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d690135f0412f9c2e460d1a28fe97277.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

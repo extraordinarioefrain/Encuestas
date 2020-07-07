@@ -22,6 +22,16 @@ namespace Encuestas
             Preguntas pr = new Preguntas();
             pr.ShowDialog();
 
+            //Boton que hace saltar la ventana de las preguntas. 
+
+        }
+
+        private void iniciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login sesion = new Login();
+            sesion.ShowDialog();
+
+            //Boton que al darle click se abre el Login. 
         }
     }
 }

@@ -22,28 +22,40 @@ namespace Encuestas
             Ejecutar();
             salir.Hide();
             
-               
+               //Al Iniciar las preguntas el boton salir se oculta para que quede al final. 
         }
         public bool boton = false;
 
         private void b1_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("Encuestass", Conexion.conex);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Opcion", 1);
-            cmd.Parameters.AddWithValue("@Preguntas", pregunta.Text);
-            cmd.Parameters.AddWithValue("@Respuestas", b1.Text);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Encuestass", Conexion.conex);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Opcion", 1);
+                cmd.Parameters.AddWithValue("@Preguntas", pregunta.Text);
+                cmd.Parameters.AddWithValue("@Respuestas", b1.Text);
 
-            Conexion.conex.Open();
-            cmd.ExecuteNonQuery();
-            Conexion.conex.Close();
-            a += 1;
-            Ejecutar();
+                Conexion.conex.Open();
+                cmd.ExecuteNonQuery();
+                Conexion.conex.Close();
+                a += 1;
+                Ejecutar();
+
+                //Conexión con la base de datos. 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void Ejecutar()
         {
-             if (a == 0)
+            //Estas son las preguntas englobadas en una sola función. 
+
+            if (a == 0)
                     {
                         pregunta.Text = "1 ¿Con qué frecuencia visita nuestra ferretería?";
                         b1.Text = "Diario";
@@ -134,6 +146,8 @@ namespace Encuestas
                 b3.Hide();
                 salir.Visible = Visible;
 
+
+                //Lo realicé así para que se cambien las preguntas y respuestas a base de condiciones y no hacer 10 ventanas. 
             }
 
 
@@ -144,32 +158,52 @@ namespace Encuestas
 
         private void b2_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("Encuestass", Conexion.conex);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Opcion", 1);
-            cmd.Parameters.AddWithValue("@Preguntas", pregunta.Text);
-            cmd.Parameters.AddWithValue("@Respuestas", b2.Text);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Encuestass", Conexion.conex);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Opcion", 1);
+                cmd.Parameters.AddWithValue("@Preguntas", pregunta.Text);
+                cmd.Parameters.AddWithValue("@Respuestas", b2.Text);
 
-            Conexion.conex.Open();
-            cmd.ExecuteNonQuery();
-            Conexion.conex.Close();
-            a += 1;
-            Ejecutar();
+                Conexion.conex.Open();
+                cmd.ExecuteNonQuery();
+                Conexion.conex.Close();
+                a += 1;
+                Ejecutar();
+
+                //Estos botones son variables de valor, guardan todo. 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void b3_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("Encuestass", Conexion.conex);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Opcion", 1);
-            cmd.Parameters.AddWithValue("@Preguntas", pregunta.Text);
-            cmd.Parameters.AddWithValue("@Respuestas", b3.Text);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Encuestass", Conexion.conex);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Opcion", 1);
+                cmd.Parameters.AddWithValue("@Preguntas", pregunta.Text);
+                cmd.Parameters.AddWithValue("@Respuestas", b3.Text);
 
-            Conexion.conex.Open();
-            cmd.ExecuteNonQuery();
-            Conexion.conex.Close();
-            a += 1;
-            Ejecutar();
+                Conexion.conex.Open();
+                cmd.ExecuteNonQuery();
+                Conexion.conex.Close();
+                a += 1;
+                Ejecutar();
+
+                //Boton para añadir las respuestas a la base de datos automaticamente. 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -189,6 +223,8 @@ namespace Encuestas
             cmd.ExecuteNonQuery();
             Conexion.conex.Close();
             
+            //Boton para las conexiones con la base de datos. 
+
         }
     }
 }

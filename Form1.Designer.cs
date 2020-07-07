@@ -70,9 +70,11 @@
             // 
             // iniciarSesionToolStripMenuItem
             // 
+            this.iniciarSesionToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.iniciarSesionToolStripMenuItem.Name = "iniciarSesionToolStripMenuItem";
             this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.iniciarSesionToolStripMenuItem.Text = "Iniciar Sesion";
+            this.iniciarSesionToolStripMenuItem.Click += new System.EventHandler(this.iniciarSesionToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -97,10 +99,12 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox1; //Imágenes utlizadas para la pantalla principal, texto, etc. 
         private System.Windows.Forms.Button txtEncuesta;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem iniciarSesionToolStripMenuItem;
+
+
     }
 }
 
