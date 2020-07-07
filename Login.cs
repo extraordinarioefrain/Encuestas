@@ -19,9 +19,9 @@ namespace Encuestas
 
         private void btnIngresar_Click(object sender, EventArgs e)
 
-        
+
         {
-            
+
 
             try
             {
@@ -33,23 +33,33 @@ namespace Encuestas
                         FuncAdministrador admin = new FuncAdministrador();
                         admin.ShowDialog();
 
+                       
                         //El resultado de cumplirse ambos requisitos, abre la ventana Funciones de Administrador. 
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Contraseña o Usuario Incorrecto");  //Mensaje de aviso que la contraseña o usuario está malo.   
                     }
 
                 }
 
                 else
                 {
-                    MessageBox.Show("Contraseña o Usuario Incorrecto");
-
-                    //Mensaje de aviso que la contraseña o usuario está malo. 
+                    MessageBox.Show("Contraseña o Usuario Incorrecto");  //Mensaje de aviso que la contraseña o usuario está malo.   
                 }
+
+
             }
             catch (Exception)
             {
 
                 throw;
             }
+            
         }
+
+         
     }
+
 }

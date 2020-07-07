@@ -27,6 +27,11 @@ namespace Encuestas
             Application.Exit();
         }
 
+        private void resetearEncuestasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("¿Estás seguro de que quieres eliminar todos los regristros?");
+        }
+
         //Los menús strip que hacen la ventana modal. 
     }
 }

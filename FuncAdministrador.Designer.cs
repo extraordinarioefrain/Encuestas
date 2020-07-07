@@ -71,6 +71,7 @@
             this.resetearEncuestasToolStripMenuItem.Name = "resetearEncuestasToolStripMenuItem";
             this.resetearEncuestasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.resetearEncuestasToolStripMenuItem.Text = "Resetear Encuestas";
+            this.resetearEncuestasToolStripMenuItem.Click += new System.EventHandler(this.resetearEncuestasToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
